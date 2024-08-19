@@ -1,0 +1,3 @@
+rootProject.name = "goCam-implementation"
+include ':app'
+include ':goCam'
