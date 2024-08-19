@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/accelerate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:theme="@style/Theme.MaterialComponents.Light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/sw_is_document"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:checked="false"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="left"
+                    android:text="Is Document :"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/sw_is_blank_document"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:checked="false"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="left"
+                    android:text="Check Blank Document :"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/sw_mask_aadhar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:checked="false"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="left"
+                    android:text="Mask Aadhaar :"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/sw_generate_pdf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:checked="false"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="left"
+                    android:text="Generate PDF :"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/sw_add_location"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:checked="false"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="left"
+                    android:text="Add Location Details :"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/sw_enable_guidelines"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:checked="false"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="left"
+                    android:text="Enable Guidelines:"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/sw_add_watermark"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:checked="false"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="left"
+                    android:text="Add Watermark:"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans"
+                        android:gravity="left"
+                        android:text="Scan Type :"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioPan"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pan"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="5dp"
+                            android:checked="true"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioAadhaar"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Aadhaar"
+                            android:layout_margin="5dp"
+                            android:checked="false"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioOther"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Other"
+                            android:layout_margin="5dp"
+                            android:checked="false"
+                            android:textSize="18sp" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans"
+                        android:gravity="left"
+                        android:text="Gallery File Type :"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupFile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioImage"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Image"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="5dp"
+                            android:checked="true"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioPdf"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="PDF"
+                            android:layout_margin="5dp"
+                            android:checked="false"
+                            android:textSize="18sp" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans"
+                        android:gravity="left"
+                        android:text="Guidelines Orientation :"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioOrientation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioHorizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="5dp"
+                            android:checked="true"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioVertical"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Vertical"
+                            android:layout_margin="5dp"
+                            android:checked="false"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioSquare"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Square"
+                            android:layout_margin="5dp"
+                            android:checked="false"
+                            android:textSize="18sp" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/open_sans"
+                        android:gravity="left"
+                        android:text="Image Count :"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="end|center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/ib_count_minus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:background="@drawable/roundcorner"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_round_remove" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tv_count"
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:cursorVisible="true"
+                            android:focusable="true"
+                            android:fontFamily="@font/open_sans"
+                            android:gravity="left"
+                            android:inputType="number"
+                            android:text="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            tools:ignore="RtlCompat" />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/ib_count_plus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/roundcorner"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_round_add" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/async"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accelerate">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tv_camera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:background="@android:color/transparent"
+                        android:drawableTop="@drawable/ic_twotone_camera_24"
+                        android:fontFamily="@font/open_sans"
+                        android:padding="@dimen/padding10"
+                        android:singleLine="true"
+                        android:text="Photo"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/tv_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:background="@android:color/transparent"
+                        android:drawableTop="@drawable/ic_twotone_videocam"
+                        android:fontFamily="@font/open_sans"
+                        android:padding="@dimen/padding10"
+                        android:singleLine="true"
+                        android:text="Video"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_scanner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:background="@android:color/transparent"
+                        android:drawableTop="@drawable/ic_baseline_qr_code_scanner"
+                        android:fontFamily="@font/open_sans"
+                        android:padding="@dimen/padding10"
+                        android:singleLine="true"
+                        android:text="Scanner"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_pan_ocr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/open_sans"
+                        android:padding="@dimen/padding10"
+                        android:singleLine="true"
+                        android:text="OCR"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        app:drawableTopCompat="@drawable/ic_ocr" />
+
+                    <TextView
+                        android:id="@+id/tv_pick_gallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/open_sans"
+                        android:padding="@dimen/padding10"
+                        android:singleLine="true"
+                        android:text="Gallery"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        app:drawableTopCompat="@drawable/ic_twotone_photo" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
