@@ -111,7 +111,7 @@ This project is licensed under the MIT License, its a opensource so you can chan
 
 ## Support
 
-If you have any questions or need support, please feel free to reach out to us via email-id "SOCIAL9741atGMAILdotCOM".
+If you have any questions or need support, please feel free to contact us via email-id "SOCIAL9741atGMAILdotCOM".
 
 ---
 
